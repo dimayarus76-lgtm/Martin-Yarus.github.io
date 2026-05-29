@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin-Yarus PAMM Trading | Alpari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { 
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #3f2a1e;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.78)), 
+                        url('https://rudesignshop.ru/wp-content/uploads/2026/02/kak-vyrastit-sekvoyyu-iz-semyan-1772999887.jpg') center/cover no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
+                        url('https://i.pinimg.com/736x/f7/cc/97/f7cc9740b0a7a1115d75b767e3efe90c.jpg') bottom/cover no-repeat;
+            background-attachment: fixed;
+            min-height: 70vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #fcd34d, #4ade80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .ai-image {
+            opacity: 0.5;
+            filter: invert(1) hue-rotate(180deg);
+        }
+    </style>
+</head>
+<body class="text-slate-200">
+
+    <!-- Header -->
+    <header class="bg-white border-b shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-5">
+                <img src="https://avatars.mds.yandex.net/i?id=899423cb9e511c2962743f9bf5a851ba7fa07dd9-4140047-images-thumbs&n=13" alt="Alpari" class="h-9">
+                <div class="flex items-center gap-4">
+                    <img src="https://avatars.mds.yandex.net/i?id=896661d1ec3b97b712113bd640f1159a55d66734-5905783-images-thumbs&n=13" alt="Martin-Yarus Logo" class="h-12 w-auto">
+                    <div>
+                        <span class="font-semibold text-2xl tracking-tight text-slate-800">Martin-Yarus</span>
+                        <span class="block text-xs text-slate-500 -mt-1">PAMM TRADING</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#invest" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl transition font-medium">
+                Инвестировать
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-6 py-24">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6">
+                    Martin-Yarus PAMM Trading
+                </h1>
+                <p class="text-xl text-emerald-100 mb-10">
+                    Профессиональный PAMM-счёт на платформе Alpari<br>
+                    с математической стратегией и поддержкой ИИ
+                </p>
+                <div class="inline-flex items-center gap-6 bg-white/10 backdrop-blur-md px-8 py-5 rounded-3xl">
+                    <div>
+                        <span class="text-5xl font-bold gradient-text">0,5–1%</span>
+                        <span class="block text-sm text-emerald-100">в среднем за торговый день</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Вкратце о трейдинге и роли ИИ -->
+    <section class="py-16 bg-[#3f2a1e]">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center mb-10 text-white">Вкратце о трейдинге и роли ИИ</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-emerald-400 font-semibold mb-5 text-xl">Почему большинство трейдеров теряют деньги?</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex gap-3"><span class="text-red-400">●</span> Торговля на эмоциях (страх, жадность, FOMO)</li>
+                        <li class="flex gap-3"><span class="text-red-400">●</span> Задержка реакции человека на рыночные изменения</li>
+                        <li class="flex gap-3"><span class="text-red-400">●</span> Когнитивные искажения и переоценка своей интуиции</li>
+                        <li class="flex gap-3"><span class="text-red-400">●</span> Отсутствие строгой математической дисциплины</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-emerald-400 font-semibold mb-5 text-xl">Преимущества ИИ в трейдинге</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex gap-3"><span class="text-emerald-400">●</span> Анализ тысяч параметров одновременно</li>
+                        <li class="flex gap-3"><span class="text-emerald-400">●</span> Полное отсутствие эмоций</li>
+                        <li class="flex gap-3"><span class="text-emerald-400">●</span> Мгновенная реакция на изменение рынка</li>
+                        <li class="flex gap-3"><span class="text-emerald-400">●</span> Строгое соблюдение правил управления рисками</li>
+                        <li class="flex gap-3"><span class="text-emerald-400">●</span> Постоянное самообучение на новых данных</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сводка по счёту -->
+    <section class="py-8 bg-[#3f2a1e]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="account-summary" style="display: flex; gap: 24px; padding: 20px; flex-wrap: wrap; justify-content: center;">
+                <div class="account-item">
+                    <div class="label">Баланс <span class="help-icon">ⓘ</span></div>
+                    <div class="value">$0.00</div>
+                </div>
+                <div class="account-item">
+                    <div class="label">Капитал <span class="help-icon">ⓘ</span></div>
+                    <div class="value">$0.00</div>
+                </div>
+                <div class="account-item">
+                    <div class="label">PnL по открытым позициям <span class="help-icon">ⓘ</span></div>
+                    <div class="value">$0.00</div>
+                </div>
+                <div class="account-item">
+                    <div class="label">Свободная маржа <span class="help-icon">ⓘ</span></div>
+                    <div class="value">$0.00</div>
+                </div>
+                <div class="account-item">
+                    <div class="label">Уровень маржи <span class="help-icon">ⓘ</span></div>
+                    <div class="value">-</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Автономный центр ИИ -->
+    <section id="strategy" class="py-20 bg-[#3f2a1e]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-semibold mb-6 leading-tight text-white">
+                        Автономный многоуровневый центр<br>принятия решений ИИ
+                    </h2>
+                    <p class="text-emerald-100 text-lg leading-relaxed mb-8">
+                        Современная система искусственного интеллекта анализирует рынок на нескольких уровнях, 
+                        принимает торговые решения и управляет рисками в режиме реального времени.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://static.vecteezy.com/system/resources/previews/025/269/190/non_2x/artificial-intelligence-circuit-line-style-machine-learning-design-smart-network-digital-technology-ai-illustration-vector.jpg" 
+                         alt="ИИ" class="rounded-3xl shadow-2xl w-2/3 ai-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Потенциальная доходность — Полная версия -->
+    <section id="results" class="py-20 bg-[#3f2a1e]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center mb-4 text-emerald-400">Потенциальная доходность</h2>
+            <p class="text-center text-slate-300 mb-12 max-w-3xl mx-auto">
+                Расчёты основаны на средней дневной доходности 0,75% (в диапазоне 0,5–1%) с ежедневным реинвестированием (компаундинг).
+            </p>
+
+            <div class="bg-[#2c2118] rounded-3xl p-10">
+                <h3 class="text-xl font-semibold mb-8 text-emerald-300">1. Срок окупаемости вложений</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-[#1f1812] p-6 rounded-2xl">
+                        <p class="text-slate-400">Возврат 100% вложенных средств</p>
+                        <p class="text-4xl font-bold text-emerald-400 mt-3">≈ 94 дня</p>
+                    </div>
+                    <div class="bg-[#1f1812] p-6 rounded-2xl">
+                        <p class="text-slate-400">Удвоение капитала (×2)</p>
+                        <p class="text-4xl font-bold text-emerald-400 mt-3">≈ 93 дня</p>
+                    </div>
+                    <div class="bg-[#1f1812] p-6 rounded-2xl">
+                        <p class="text-slate-400">Утроение капитала (×3)</p>
+                        <p class="text-4xl font-bold text-emerald-400 mt-3">≈ 147 дней</p>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold mb-6 text-emerald-300">2. Пример расчёта для разных сумм (чистая доходность инвестора — 70%)</h3>
+                    <table class="w-full text-sm">
+                        <thead class="bg-emerald-800">
+                            <tr>
+                                <th class="py-4 px-6 text-left">Сумма инвестиций</th>
+                                <th class="py-4 px-6 text-center">3 месяца</th>
+                                <th class="py-4 px-6 text-center">6 месяцев</th>
+                                <th class="py-4 px-6 text-center">12 месяцев</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-700">
+                            <tr>
+                                <td class="py-5 px-6">$1 000</td>
+                                <td class="py-5 px-6 text-center">$1 446</td>
+                                <td class="py-5 px-6 text-center">$2 176</td>
+                                <td class="py-5 px-6 text-center font-semibold text-emerald-400">$6 570</td>
+                            </tr>
+                            <tr>
+                                <td class="py-5 px-6">$5 000</td>
+                                <td class="py-5 px-6 text-center">$7 230</td>
+                                <td class="py-5 px-6 text-center">$10 880</td>
+                                <td class="py-5 px-6 text-center font-semibold text-emerald-400">$32 850</td>
+                            </tr>
+                            <tr>
+                                <td class="py-5 px-6">$10 000</td>
+                                <td class="py-5 px-6 text-center">$14 460</td>
+                                <td class="py-5 px-6 text-center">$21 760</td>
+                                <td class="py-5 px-6 text-center font-semibold text-emerald-400">$65 700</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-12 p-8 bg-[#1f1812] rounded-2xl border border-amber-900">
+                    <h3 class="font-semibold mb-4">3. Стратегия «Кредит + PAMM» (пример)</h3>
+                    <p class="text-slate-300 mb-6">Инвестиция 1 000 000 ₽ под кредит 22% годовых:</p>
+                    <ul class="space-y-3 text-slate-300">
+                        <li>• Расходы по кредиту за год: ≈ <strong>220 000 ₽</strong></li>
+                        <li>• Ожидаемая прибыль от PAMM (чистая): ≈ <strong>3 900 000 ₽</strong></li>
+                        <li class="text-emerald-400 font-semibold">Чистая прибыль после погашения кредита: ≈ 3 680 000 ₽</li>
+                    </ul>
+                    <p class="text-xs text-amber-400 mt-6">Важно: Использование заёмных средств существенно повышает риски. В случае просадки возможна потеря как собственных, так и кредитных средств.</p>
+                </div>
+
+                <p class="text-xs text-slate-400 mt-10 leading-relaxed">
+                    * Все расчёты носят иллюстративный и математический характер. Реальная доходность PAMM-счёта может быть как значительно выше, так и ниже указанных значений, включая полную потерю капитала. 
+                    Прошлые результаты не гарантируют будущих. Перед инвестированием рекомендуется провести независимый анализ.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="py-12 bg-[#3f2a1e]">
+        <div class="max-w-md mx-auto px-6">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-emerald-300">Контакты управляющего</h2>
+            <div class="bg-[#2c2118] rounded-3xl shadow p-8">
+                <div class="space-y-6 text-sm">
+                    <div class="flex items-center gap-4">
+                        <i class="fa-solid fa-user text-2xl text-emerald-500"></i>
+                        <div>
+                            <p class="font-medium">Дмитрий Сергеевич</p>
+                            <p class="text-slate-400">Управляющий PAMM-счётом</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fa-solid fa-phone text-2xl text-yellow-400"></i>
+                        <a href="tel:+79092805544" class="font-medium">+7 (909) 280-55-44</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fa-solid fa-comment-dots text-2xl text-orange-400"></i>
+                        <div>
+                            <p class="font-medium">Telegram • WhatsApp • Max</p>
+                            <p class="text-slate-400">+7 (909) 280-55-44</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fa-solid fa-envelope text-2xl text-emerald-500"></i>
+                        <a href="mailto:dimayarus76@gmail.com" class="font-medium">dimayarus76@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Нижний блок -->
+    <section class="bottom-bg text-white">
+        <div class="max-w-7xl mx-auto px-6 pb-20">
+            <div class="max-w-xl">
+                <h2 class="text-4xl font-semibold mb-6">Готовы к стабильному росту капитала?</h2>
+                <a href="#invest" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-2xl text-lg font-medium">
+                    Инвестировать сейчас →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Warning -->
+    <section class="py-16 bg-[#2c2118] text-slate-300">
+        <div class="max-w-3xl mx-auto px-6 text-center text-sm">
+            <strong class="text-emerald-400 block mb-4">Предупреждение о рисках</strong>
+            Инвестирование в PAMM-счета связано с высоким риском потери капитала. 
+            Прошлые результаты не гарантируют будущей прибыли. Инвестируйте только те средства, которые вы можете позволить себе потерять.
+        </div>
+    </section>
+
+    <footer class="bg-[#2c2118] border-t border-amber-900 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-slate-400">
+            © 2026 Martin-Yarus PAMM Trading • PAMM-счёт на платформе Alpari
+        </div>
+    </footer>
+
+</body>
+</html>
