@@ -41,6 +41,16 @@
             opacity: 0.5;
             filter: invert(1) hue-rotate(180deg);
         }
+
+        /* Плавное затухание шапки */
+        header {
+            transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
     </style>
 </head>
 <body class="text-slate-200">
@@ -58,9 +68,12 @@
                     </div>
                 </div>
             </div>
-            <a href="#invest" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl transition font-medium">
-                Инвестировать
-            </a>
+
+            <div class="flex items-center gap-3">
+                <a href="https://trade.alpari.com/login" target="_blank" class="px-6 py-2.5 text-slate-700 hover:text-slate-900 font-medium transition">Войти</a>
+                <a href="https://trade.alpari.com/signup" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-2.5 rounded-2xl font-medium transition">Зарегистрироваться</a>
+                <a href="https://trade.alpari.com" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white px-7 py-2.5 rounded-2xl font-medium transition">Инвестировать</a>
+            </div>
         </div>
     </header>
 
@@ -162,12 +175,12 @@
         </div>
     </section>
 
-    <!-- Потенциальная доходность — Полная версия -->
+    <!-- Потенциальная доходность -->
     <section id="results" class="py-20 bg-[#3f2a1e]">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-3xl font-semibold text-center mb-4 text-emerald-400">Потенциальная доходность</h2>
             <p class="text-center text-slate-300 mb-12 max-w-3xl mx-auto">
-                Расчёты основаны на средней дневной доходности 0,75% (в диапазоне 0,5–1%) с ежедневным реинвестированием (компаундинг).
+                Расчёты основаны на средней дневной доходности 0,75% (в диапазоне 0,5–1%) с ежедневным реинвестированием.
             </p>
 
             <div class="bg-[#2c2118] rounded-3xl p-10">
@@ -220,29 +233,13 @@
                         </tbody>
                     </table>
                 </div>
-
-                <div class="mt-12 p-8 bg-[#1f1812] rounded-2xl border border-amber-900">
-                    <h3 class="font-semibold mb-4">3. Стратегия «Кредит + PAMM» (пример)</h3>
-                    <p class="text-slate-300 mb-6">Инвестиция 1 000 000 ₽ под кредит 22% годовых:</p>
-                    <ul class="space-y-3 text-slate-300">
-                        <li>• Расходы по кредиту за год: ≈ <strong>220 000 ₽</strong></li>
-                        <li>• Ожидаемая прибыль от PAMM (чистая): ≈ <strong>3 900 000 ₽</strong></li>
-                        <li class="text-emerald-400 font-semibold">Чистая прибыль после погашения кредита: ≈ 3 680 000 ₽</li>
-                    </ul>
-                    <p class="text-xs text-amber-400 mt-6">Важно: Использование заёмных средств существенно повышает риски. В случае просадки возможна потеря как собственных, так и кредитных средств.</p>
-                </div>
-
-                <p class="text-xs text-slate-400 mt-10 leading-relaxed">
-                    * Все расчёты носят иллюстративный и математический характер. Реальная доходность PAMM-счёта может быть как значительно выше, так и ниже указанных значений, включая полную потерю капитала. 
-                    Прошлые результаты не гарантируют будущих. Перед инвестированием рекомендуется провести независимый анализ.
-                </p>
             </div>
         </div>
     </section>
 
     <!-- Контакты -->
     <section class="py-12 bg-[#3f2a1e]">
-        <div class="max-w-md mx-auto px-6">
+        <div class="max-w-md ml-auto mr-6 px-6">
             <h2 class="text-2xl font-semibold text-center mb-8 text-emerald-300">Контакты управляющего</h2>
             <div class="bg-[#2c2118] rounded-3xl shadow p-8">
                 <div class="space-y-6 text-sm">
@@ -278,7 +275,8 @@
         <div class="max-w-7xl mx-auto px-6 pb-20">
             <div class="max-w-xl">
                 <h2 class="text-4xl font-semibold mb-6">Готовы к стабильному росту капитала?</h2>
-                <a href="#invest" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-2xl text-lg font-medium">
+                <a href="https://trade.alpari.com" target="_blank"
+                   class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-2xl text-lg font-medium">
                     Инвестировать сейчас →
                 </a>
             </div>
@@ -290,7 +288,7 @@
         <div class="max-w-3xl mx-auto px-6 text-center text-sm">
             <strong class="text-emerald-400 block mb-4">Предупреждение о рисках</strong>
             Инвестирование в PAMM-счета связано с высоким риском потери капитала. 
-            Прошлые результаты не гарантируют будущей прибыли. Инвестируйте только те средства, которые вы можете позволить себе потерять.
+            Прошлые результаты не гарантируют будущей прибыли.
         </div>
     </section>
 
@@ -300,5 +298,16 @@
         </div>
     </footer>
 
+    <script>
+        // Плавное затухание шапки
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 80) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
